@@ -7,7 +7,7 @@
   margin-bottom: 100px;
   box-sizing: border-box;
   flex: 0 1 1100px;
-  padding: 40px;
+  padding: 20px;
   background: $opacityCharcoal;
   height: auto;
   h1{
@@ -84,6 +84,7 @@
     flex: 0 1 (100%/4);
   }
   #about-wrapper{
+    padding: 40px;
     h1{
       margin-bottom: 35px;
     }

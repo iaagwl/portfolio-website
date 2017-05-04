@@ -266,7 +266,7 @@ footer {
   margin-bottom: 100px;
   box-sizing: border-box;
   flex: 0 1 1100px;
-  padding: 40px;
+  padding: 20px;
   background: rgba(30, 30, 31, 0.85);
   height: auto; }
   #about-wrapper h1 {
@@ -327,14 +327,16 @@ footer {
   .icon-list ul li {
     flex: 0 1 25%; }
 
-  #about-wrapper h1 {
-    margin-bottom: 35px; }
-  #about-wrapper .about-info p {
-    font-size: 15px;
-    margin-bottom: 20px; }
-  #about-wrapper blockquote {
-    font-size: 20px;
-    margin-bottom: 20px; } }
+  #about-wrapper {
+    padding: 40px; }
+    #about-wrapper h1 {
+      margin-bottom: 35px; }
+    #about-wrapper .about-info p {
+      font-size: 15px;
+      margin-bottom: 20px; }
+    #about-wrapper blockquote {
+      font-size: 20px;
+      margin-bottom: 20px; } }
 @media screen and (min-width: 660px) {
   .icon-list ul li {
     flex: 0 1 16.66667%; } }
