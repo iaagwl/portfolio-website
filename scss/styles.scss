@@ -1,0 +1,31 @@
+//Imports
+@import "variables";
+@import "mixins";
+@import "navbar";
+@import "portfolio";
+@import "footer";
+@import "home";
+@import "about";
+@import "contact";
+
+*{
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+}
+
+body{
+  background: url(../images/bg1.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+#wrapper{
+  margin: 0;
+}
+
+
+@media screen and (min-width: 768px){
+  #wrapper{
+    margin-left: 80px;
+  }
+}

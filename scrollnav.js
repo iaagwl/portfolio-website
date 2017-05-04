@@ -1,0 +1,37 @@
+$(document).ready(function(){
+
+  //Smooth scrolling on nav clicks
+  $('.slide-section').click(function(e){
+    var linkHref = $(this).attr('href');
+    var viewPortWidth = $( window ).width();
+
+    if (viewPortWidth >= 768){
+      $('html, body').animate({
+        scrollTop: $(linkHref).offset().top
+      }, 1100);
+    }
+
+    if (viewPortWidth < 768){
+      var difference = (linkHref !== "#projects") ? 75 : 0
+      $('html, body').animate({
+        scrollTop: $(linkHref).offset().top - difference
+      }, 1100);
+
+      $("nav ul").toggleClass("open");
+      $("#burger-container").toggleClass("open");
+    }
+    e.preventDefault();
+  });
+
+  //Smooth scrolling on Home arrow and Logo clicks
+  $('.slide-section-home').click(function(e){
+    var linkHref = $(this).attr('href');
+
+    $('html, body').animate({
+      scrollTop: $(linkHref).offset().top
+    }, 900);
+
+    e.preventDefault();
+  });
+
+});

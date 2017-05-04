@@ -1,0 +1,186 @@
+.nav-wrapper{
+  background: $opacityCharcoal;
+  width: 100%;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+a.logo-home{
+  margin: 0 20px;
+  display: inline-block;
+  width: 50px;
+}
+
+a.logo-home img{
+  width: 100%;
+}
+
+/* menu base styles */
+nav{
+
+  span.menu-text{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 28px;
+    margin: 0 5%;
+  }
+
+  #burger-container{
+    position: absolute;
+    top: 4px;
+    right: 20px;
+  }
+
+  #burger{
+  cursor: pointer;
+  display: block;
+  }
+
+  #burger span{
+    background: $mediumGray;
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin: 5px 0;
+    position: relative;
+    top: 0;
+    transition: all ease-in-out 0.09s;
+  }
+
+  #burger-container.open span:nth-child(2),
+  #burger-container.open span:nth-child(3){
+    width: 0;
+    opacity: 0;
+  }
+
+  #burger-container.open span:nth-child(4){
+  transform: rotate(45deg);
+  top: -15px;
+  }
+
+  #burger-container.open span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 15px;
+  }
+
+  ul{
+    list-style-type: none;
+    padding: 0;
+    display: none;
+  }
+
+  ul.open{
+    display: block;
+  }
+
+  a{
+    box-sizing: border-box;
+    font-size: 28px;
+    width: 100%;
+    text-decoration: none;
+    text-align: right;
+    color: $mediumGray;
+    padding: 10px;
+    display: block;
+  }
+
+  a span.menu-text{
+    color: $mediumGray;
+  }
+
+  a.active{
+    color: $lightGreen;
+  }
+
+  a:hover{
+    color: $lightGreen;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .nav-wrapper{
+    height: 100vh;
+    width: 80px;
+  }
+
+  a.logo-home{
+    margin: 15px auto 75px;
+    width: 80px;
+    padding: 0;
+
+    img{
+      width: 60%;
+      padding: 0 20%;
+    }
+  }
+
+  nav{
+    height: 100%;
+
+    #burger-container{
+      display: none;
+    }
+
+    span.menu-text{
+      display: none;
+    }
+
+    ul{
+      display: block;
+    }
+
+    li{
+      width: 100%;
+    }
+
+    a{
+      font-size: 38px;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+  }
+
+  .tooltip{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    &::before, &::after{
+      position: absolute;
+      top: 34px;
+      left: 90px;
+      display: none;
+    }
+
+    &::before{
+      content: "";
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-right: 6px solid $lightGreen;
+    }
+
+    &::after{
+      font-weight: 800;
+      text-transform: uppercase;
+      content: attr(data-tooltip);
+      background: $lightGreen;
+      font-size: 13px;
+      margin-top: -15px;
+      margin-left: 6px;
+      padding: 14px;
+      color: $darkGray;
+    }
+
+    /* Hover states */
+    &:hover::before, &:hover::after{
+      display: inherit;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+#contact{
+  @include sectionFlex;
+}
+
+#contact-wrapper{
+  max-width: 96%;
+  margin-bottom: 100px;
+  flex: 0 1 1100px;
+  box-sizing: border-box;
+  padding: 40px;
+  background: $opacityCharcoal;
+  height: auto;
+  h1{
+    text-transform: uppercase;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto 20px;
+    font-weight: 400;
+    color: $darkGray;
+    background-color: $lightGreen;
+  }
+
+}
+
+.contact-info{
+  display: flex;
+  justify-content: center;
+  border-top: solid 1px #353535;
+  padding-top: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-item{
+  flex: 0 1 100%;
+  text-align: center;
+  min-width: 155px;
+  margin: 10px 0px;
+  i{
+    display: block;
+    color: $lightGreen;
+    font-size: 55px;
+    margin-bottom: 20px;
+  }
+  p{
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    color: #e0e0e0;
+  }
+  a{
+    font-weight: 500;
+    font-size: 18px;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    text-decoration: none;
+    color: #e0e0e0;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+}
+
+@media screen and (min-width: 430px){
+  .contact-item{
+    flex: 0 1 50%;
+  }
+}
+
+@media screen and (min-width: 860px){
+  .contact-item{
+    flex: 0 1 25%;
+  }
+}
