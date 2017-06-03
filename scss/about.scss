@@ -40,7 +40,9 @@
     line-height: 26px;
   }
   .about-image{
-    flex: 0 1 25%;
+    flex: 0 1 30%;
+    display: none;
+    text-align: center;
   }
   .about-image img{
     width: 200px;
@@ -105,13 +107,16 @@
   }
 }
 
-@media screen and (min-width: 780px){
+@media screen and (min-width: 1000px){
   #about-wrapper{
     .about-content{
       justify-content: space-between;
     }
     .about-info{
       flex: 0 1 65%;
+    }
+    .about-image{
+      display: block;
     }
   }
 }

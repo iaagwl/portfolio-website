@@ -14,15 +14,24 @@
   color: #fff;
 }
 
-body{
-  background: url(../images/bg1.jpg) no-repeat center center fixed;
+body:after{
+  content: "";
+  position: fixed; // stretch a fixed position to the whole screen
+  top: 0;
+  height: 100vh; // fix for mobile browser address bar appearing disappearing
+  left: 0;
+  right: 0;
+  z-index: -1; // needed to keep in the background
+  background: #252525 url(../images/bg1.jpg) center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
 #wrapper{
   margin: 0;
 }
-
 
 @media screen and (min-width: 768px){
   #wrapper{

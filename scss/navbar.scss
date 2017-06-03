@@ -9,9 +9,11 @@
 }
 
 a.logo-home{
-  margin: 0 20px;
+  margin: 0px 20px 0px;
   display: inline-block;
   width: 50px;
+  display: flex;
+  align-items: center;
 }
 
 a.logo-home img{

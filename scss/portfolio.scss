@@ -32,15 +32,15 @@
     height: 250px;
     margin: 0;
     opacity: 0;
-    box-shadow: inset 0 0 1px 0 rgba(255,255,255,0.3);
-    animation: smoothOpacityOut 0.3s cubic-bezier(.06,.33,.77,.94);
+    box-shadow: inset 0 0 2px 0 rgba(255,255,255,0.2);
+    animation: smoothOpacityOut 0.3s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center
   }
 
   .image-overlay:hover{
-    animation: smoothOpacityIn forwards 0.3s cubic-bezier(.06,.77,.33,.94);
+    animation: smoothOpacityIn forwards 0.3s ease-in-out;
   }
 
   .image-overlay span{
@@ -50,15 +50,15 @@
 
   .project-info{
     background: none;
-    width: 75%;
-    margin: 35px auto 0;
+    width: 82%;
+    margin: 30px auto 0;
     height: auto;
     line-height: 26px;
     display: block;
   }
 
   .project-info h2{
-     margin-bottom: 25px;
+     margin-bottom: 20px;
   }
 
   .project-info a{
@@ -84,8 +84,14 @@
     .project-card{
       padding: 0 0 50px;
     }
+    .project-info{
+      width: 75%;
+      margin: 35px auto 0;
+    }
+    .project-info h2{
+       margin-bottom: 25px;
+    }
   }
-
 }
 
 @keyframes smoothOpacityIn {
