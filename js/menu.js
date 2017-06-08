@@ -3,6 +3,7 @@ $(document).ready(function(){
         projects = $("nav ul li a.projects"),
         about = $("nav ul li a.about"),
         contact = $("nav ul li a.contact")
+
     //Burger menu
     $("#burger-container").on('click', function(){
         $("nav ul").toggleClass("open")
