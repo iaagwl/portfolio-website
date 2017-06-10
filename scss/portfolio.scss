@@ -1,3 +1,5 @@
+// media-query min-width 768px portfolio-wrapper change nth-child on added portfolio
+
 #projects{
   @include sectionFlex;
 }
@@ -80,9 +82,25 @@
 
   #projects-wrapper{
     margin: 100px auto;
-    width: 99%;
+    width: 75%;
+    padding-bottom: 75px;
+    padding-left: 450px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    flex-wrap: nowrap;
     .project-card{
       padding: 0 0 50px;
+      min-width: 395px;
+      margin: 10px;
+      &:nth-of-type(5){
+        &::after{
+          content: "";
+          display: block;
+          width: 650px;
+          height: 5px;
+        }
+      }
     }
     .project-info{
       width: 75%;
@@ -90,6 +108,17 @@
     }
     .project-info h2{
        margin-bottom: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 2150px){
+  #projects-wrapper{
+    width: 99%;
+
+    .project-card{
+      width: 200px;
+      padding: 0 0 50px;
     }
   }
 }
